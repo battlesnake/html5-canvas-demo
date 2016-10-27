@@ -1,0 +1,45 @@
+doctype html
+
+html
+	head
+		meta(charset='utf8')
+		title Canvas demo
+		link(rel='stylesheet', href='style.css')
+		script(src='script.js')
+	body.app.rows.full-length
+		// Interface is made of rows
+		// First row contains two columns
+		section.columns.full-length.dynamic
+			// Brushes
+			aside.columns.toolbar.brushes
+				button.button
+					span.size1
+				button.button
+					span.size2
+				button.button
+					span.size3
+				button.button
+					span.size4
+				button.button
+					span.size5
+			// Main drawing area
+			main.easel.dynamic
+				canvas.canvas(tabindex=0)
+		// Colours
+		section.rows.toolbar.colors
+			button.button
+				span.black
+			button.button
+				span.white
+			button.button
+				span.red
+			button.button
+				span.yellow
+			button.button
+				span.green
+			button.button
+				span.cyan
+			button.button
+				span.blue
+			button.button
+				span.fuchsia

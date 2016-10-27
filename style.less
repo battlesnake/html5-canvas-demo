@@ -1,0 +1,143 @@
+/* Reset - to remove default styles */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	background: none;
+	font-size: inherit;
+	cursor: default;
+	user-select: none;
+}
+
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+/* Begin actual stylesheet now */
+
+.app {
+}
+
+/* Column/row containers (using flexbox) */
+.columns,
+.rows {
+	display: flex;
+}
+
+.rows {
+	flex-direction: column;
+}
+
+.columns {
+	flex-direction: row;
+}
+
+/* Flexbox where items do not wrap and do fill the cross-axis */
+.full-length {
+	flex-wrap: nowrap;
+	align-items: stretch;
+}
+
+/* Flex item which can adjust its size to fill the remaining space */
+.dynamic {
+	flex: 1 1 auto;
+}
+
+/* Toolbars */
+.toolbar {
+	background: silver;
+	border: 2px outset #eee;
+	flex-wrap: wrap;
+	padding: 1px;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex: 0 0 71px;
+}
+
+.toolbar.rows {
+	/* Workaround a bug in Firefox */
+	max-height: 71px;
+}
+
+/* Items in toolbar are sized to 2 items per row/columns, with some spacing */
+.toolbar>* {
+	width: 30px;
+	height: 30px;
+	margin: 1px;
+}
+
+/* Buttons */
+.button {
+	border: 1px outset #eee;
+	background: silver;
+	border-radius: 4px;
+}
+
+.button:active:focus,
+.button.down {
+	border: 1px inset #eee;
+	padding: 2px 0 0 2px;
+	background: darkgray;
+}
+
+/* Background behind canvas */
+.easel {
+	background: gray;
+}
+
+/* Canvas */
+.canvas {
+	background: white;
+	width: 300px;
+	height: 300px;
+	cursor: crosshair;
+}
+
+/* Size buttons */
+.brushes .button {
+	/* Center brush size rectangle in the button */
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+}
+.brushes .button span {
+	display: block;
+	background: black;
+	width: 15px;
+	border-radius: 3px;
+}
+.brushes .button .size1 { min-height: 1px; }
+.brushes .button .size2 { min-height: 2px; }
+.brushes .button .size3 { min-height: 3px; }
+.brushes .button .size4 { min-height: 4px; }
+.brushes .button .size5 { min-height: 5px; }
+
+/* Colour buttons */
+.colors .button {
+	padding: 2px;
+}
+.colors .button span {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 2px;
+}
+.colors .black { background: black; }
+.colors .white { background: white; }
+.colors .red { background: red; }
+.colors .yellow { background: yellow; }
+.colors .green { background: green; }
+.colors .cyan { background: cyan; }
+.colors .blue { background: blue; }
+.colors .fuchsia { background: fuchsia; }
