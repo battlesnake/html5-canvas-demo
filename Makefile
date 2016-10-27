@@ -2,19 +2,14 @@
 
 .SECONDARY:
 
-default: out/index.html out/style.css out/script.js
+default: index.html style.css script.js
 
 clean:
-	rm -rf -- out/
+	rm -- index.html
 
-%/:
-	mkdir -p -- $@
+%.html: %.jade
+	pug --pretty < $^ > $@
 
-out/%.html: %.jade | out/
-	pug < $^ > $@
+%.css:
 
-out/%.css: %.less | out/
-	lessc - < $^ > $@
-
-out/%.js: %.js | out/
-	cat < $^ > $@
+%.js:

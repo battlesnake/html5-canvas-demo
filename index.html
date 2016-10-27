@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>Canvas demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body class="app rows full-length">
+    <!-- Interface is made of rows-->
+    <!-- First row contains two columns-->
+    <section class="columns full-length dynamic">
+      <!-- Brushes-->
+      <aside class="columns toolbar brushes">
+        <button class="button"><span class="size1"></span></button>
+        <button class="button"><span class="size2"></span></button>
+        <button class="button"><span class="size3"></span></button>
+        <button class="button"><span class="size4"></span></button>
+        <button class="button"><span class="size5"></span></button>
+      </aside>
+      <!-- Main drawing area-->
+      <main class="easel dynamic">
+        <canvas class="canvas" tabindex="0"></canvas>
+      </main>
+    </section>
+    <!-- Colours-->
+    <section class="rows toolbar colors">
+      <button class="button"><span class="black"></span></button>
+      <button class="button"><span class="white"></span></button>
+      <button class="button"><span class="red"></span></button>
+      <button class="button"><span class="yellow"></span></button>
+      <button class="button"><span class="green"></span></button>
+      <button class="button"><span class="cyan"></span></button>
+      <button class="button"><span class="blue"></span></button>
+      <button class="button"><span class="fuchsia"></span></button>
+    </section>
+  </body>
+</html>
